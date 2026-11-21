@@ -13,16 +13,17 @@ module; the Rust scaffold lives in `rust/zen-fork/`.
 
 - **GitHub fork:** `triangleos-dev/zen-browser-rust` — created via
   `gh api repos/zen-browser/desktop/forks -f name=zen-browser-rust`
-  (authenticated account: `triangleos-dev`). It is synced with the source
+  (authenticated account: `triangleos-dev`). Synced with the source
   (`zen-browser/desktop`, dev HEAD `6acdd79a`).
-- **Local working copy:** the repo is ~5.9 GB (a full Firefox-fork tree),
-  so `git clone` through GitHub's git smart-HTTP keeps dying mid-transfer
-  on this network. A `curl` download of the codeload tarball is in
-  progress (`/tmp/opencode/zen-dl/zen-browser-rust.tar.gz`); when it lands,
-  the working copy at `/home/dmytro/zen-browser-fork` is extracted from it
-  (`mkdir -p /home/dmytro/zen-browser-fork` + `tar -xzf ... --strip-components=1`).
-  Until then, anyone can clone the fork themselves:
+- **The Rust rewrite** lives on branch `rust-rewrite` of the fork:
+  `rust/zen-fork/` + `REWRITE_PLAN.md`, on top of the fork's source tree
+  (commit `0fc7a190864a`, tree `b776fd38`). Local working copy of the
+  scaffold: `/home/dmytro/zen-scaffold-staging/rust/zen-fork/`.
+- **Local copy of the full fork tree:** the repo is ~5.9 GB; `git clone`
+  through GitHub's smart-HTTP kept dying mid-transfer on this network and
+  a codeload tarball download stalled, so get it by cloning the fork:
   `git clone https://github.com/triangleos-dev/zen-browser-rust.git`
+  (or `--branch rust-rewrite` for the rewrite start).
 
 ## What "rewritten in Rust" means here
 
