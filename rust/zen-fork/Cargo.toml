@@ -1,0 +1,17 @@
+[package]
+name = "zen-fork"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "A Rust rewrite of the Zen Browser browser shell: workspaces, vertical tabs, compact mode, Glance and split view."
+license = "MPL-2.0"
+
+[lib]
+name = "zen_fork"
+path = "src/lib.rs"
+
+[[bin]]
+name = "zen-fork"
+path = "src/main.rs"
+
+[dependencies]
